@@ -9,13 +9,15 @@
 }
 
 /*header*/
-header{
+header {
     align-items: center;
     border: 1px solid lightgray;
     height: 60px;
-    background-color:whitesmoke;
+    background-color: whitesmoke;
     position: sticky;
-    padding: 0px 60px 0px 60px;
+    top: 0; /* Ensure it sticks to the top */
+    z-index: 1000; /* Keep it above other elements */
+    padding: 0px 60px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -205,15 +207,16 @@ button:focus {
     display: flex;
     flex-direction: column;
     background-color: transparent;
-    margin: 0px 40px;
+    margin: 30px 20px 40px 80px;
+    width: 65%;
 }
 
 /*section1of7 profile*/
 .profile {
+    border: 1px solid lightgray;
     background-color: whitesmoke;
-    width: 70%;
     height: fit-content;
-    margin: 20px;
+    margin: 0px 0px 6px 0px;
     border-radius: 10px;
     position: relative;
     display: flex;
@@ -410,34 +413,62 @@ button:focus {
     margin: 0px 10px 0px 0px ;
 }
 
-/*section2of7 service*/
-.service {
+/*subcontainers*/
+.subcontainer {
+    border: 1px solid lightgray;
     background-color: whitesmoke;
-    width: 70%;
     height: fit-content;
-    margin: 20px;
+    margin: 0px 0px 6px 0px;
     border-radius: 10px;
     position: relative;
     display: flex;
     flex-direction: column;
-    padding: 20px;
 }
-.line8 p{
+.scheading p{
+    border-radius: 10px 10px 0px 0px;
     background-color: whitesmoke;
     display: flex;
     flex-direction: row;
     font-size: 30px;
     font-weight: 500;
+    padding: 20px 0px 0px 20px;
 }
+.showmore p{
+    border-radius: 0px 0px 10px 10px;
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 0px 10px 20px;
+    border: 1px solid lightgray;
+    color: rgb(76, 76, 76);
+}
+.showmore i{
+    background-color: transparent;
+    color: rgb(76, 76, 76);
+}
+.showmore{
+    background-color: whitesmoke;
+    transition: ease-in .3s;
+}
+.showmore:hover{
+    background-color: rgba(0, 0, 0, 0.053);
+}
+
+/*section2of7 service*/
 .line9 p{
     background-color: whitesmoke;
     display: flex;
     flex-direction: row;
     font-size: 20px;
     font-weight: 500;
+    padding: 0px 0px 0px 20px;
 }
 .line10{
     background-color: whitesmoke;
+    padding: 0px 0px 0px 20px;
 }
 .line10 button{
     border-radius: 20px;
@@ -455,10 +486,81 @@ button:focus {
     border:3px solid rgb(0, 0, 0);
     background-color: rgba(0, 0, 0, 0.046);
 }
-.line11 p{
+
+/*section3of7 activity*/
+.line13 p{
+    color: gray;
     background-color: whitesmoke;
+    font-size: 18px;
+    font-weight: 350;
+    padding: 0px 0px 10px 20px;
+}
+.line14{
     display: flex;
     flex-direction: row;
+    background-color: whitesmoke;
+    padding: 0px 0px 10px 20px;
+}
+.line14 button{
+    margin: 0px 10px 10px 0px;
+    border-radius: 20px;
+    padding: 5px 10px;
     font-size: 20px;
     font-weight: 500;
+}
+#posts{
+    border: 3px solid green;
+    color: whitesmoke;
+    background-color: green;
+    transition: .3s ease-in;
+}
+#posts:hover{
+    border: 3px solid darkgreen;
+    background-color: darkgreen;
+}
+#comments{
+    border: 1px solid darkgray;
+    color: black;
+    background-color: whitesmoke;
+    transition: .3s ease-in;
+}
+#comments:hover{
+    border: 3px solid darkgray;
+    background-color: rgba(0, 0, 0, 0.064);
+}
+.line15{
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 20px;
+}
+.card1 {
+    width: 50%;
+    margin: 10px;
+    height: 500px;
+    background-color: whitesmoke;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.cardfoot {
+    height: 50px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    border-top: 1px solid lightgray;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: whitesmoke;
+}
+
+.cardfoot i {
+    font-size: 24px;
+    cursor: pointer;
+    color: rgb(75,75,75);
+    background-color: transparent;
 }
